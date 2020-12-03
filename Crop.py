@@ -3,7 +3,7 @@ import sys
 
 if len(sys.argv) != 2:
     print("Wrong amount of command line arguments given")
-    print("Try: 'python Crop.py -input_file_name-")
+    print("Try: 'python Crop.py labels.pdf'")
     sys.exit(1)
 
 in_file = open(str(sys.argv[1]), 'rb')
@@ -32,5 +32,6 @@ for pagenum in range(pdf_reader.numPages):
 
 pdf_writer.write(out_file)
 
+# close input and output file streams
 in_file.close()
 out_file.close()
